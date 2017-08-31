@@ -8,4 +8,4 @@ Also used for [Codecourse](https://www.codecourse.com) courses, just to save a l
 Feel free to submit any fixes. 
 Thanks!
 
-Special thanky to [Codecourse](https://gcodecourse.com) for the [boilerplate](https://github.com/codecourse/slender)
+Special thanky to [Codecourse](https://codecourse.com) for the [boilerplate](https://github.com/codecourse/slender)
