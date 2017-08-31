@@ -10,7 +10,8 @@
         "slim/twig-view": "^2.2",
         "symfony/var-dumper": "^3.2",
         "vlucas/phpdotenv": "^2.4",
-        "illuminate/database": "^5.5"
+        "illuminate/database": "^5.5",
+        "robmorgan/phinx": "^0.8.1"
     },
     "autoload": {
         "psr-4": {
