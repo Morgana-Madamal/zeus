@@ -6,11 +6,21 @@
   {
     public function up()
     {
-      //
+      $this->schema->create('', function (Blueprint $table){
+        //
+      });
+
+      $this->schema->table('', function (Blueprint $table){
+        //
+      });
     }
 
     public function down()
     {
-      //
+      $this->schema->table('', function (Blueprint $table){
+        //
+      });
+
+     $this->schema->drop('');
     }
   }
