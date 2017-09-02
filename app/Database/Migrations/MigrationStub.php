@@ -21,6 +21,6 @@
         //
       });
 
-     $this->schema->drop('');
+      $this->schema->drop('');
     }
   }

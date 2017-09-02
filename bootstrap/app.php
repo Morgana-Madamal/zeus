@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -42,6 +43,10 @@ $container['view'] = function ($container) {
     $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
 
     return $view;
+};
+
+$container['validator'] = function($container) {
+    return new \Zeus\Validation\Validator;
 };
 
 require_once __DIR__ . '/database.php';
