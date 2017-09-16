@@ -51,6 +51,7 @@ $container['validator'] = function ($container) {
 
 //Middleware
 $app->add(new \Zeus\Middleware\ValidationErrorsMiddleware($container));
+$app->add(new \Zeus\Middleware\SignUpInputMiddleware($container));
 
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/../routes/web.php';
