@@ -45,9 +45,12 @@ $container['view'] = function ($container) {
     return $view;
 };
 
-$container['validator'] = function($container) {
+$container['validator'] = function ($container) {
     return new \Zeus\Validation\Validator;
 };
+
+//Middleware
+$app->add(new \Zeus\Middleware\ValidationErrorsMiddleware($container));
 
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/../routes/web.php';

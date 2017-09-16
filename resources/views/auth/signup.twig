@@ -1,4 +1,5 @@
 <form action="{{ path_for('auth.signup') }}" method="POST">
+    {{ errors | json_encode }}
     <input type="email" name="email" placeholder="you@domain.com">
     <input type="text" name="username" placeholder="Username">
     <input type="password" name="password" placeholder="Password">

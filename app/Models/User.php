@@ -1,15 +1,15 @@
 <?php
     namespace Zeus\Models;
 
-    use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
-    class User extends Model
-    {
-        protected $table = 'users';
+class User extends Model
+{
+    protected $table = 'users';
 
-        protected $fillable = [
+    protected $fillable = [
             'username',
             'password',
             'email'
         ];
-    }
+}

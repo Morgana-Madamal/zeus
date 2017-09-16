@@ -10,9 +10,8 @@ use Respect\Validation\Validator as v;
 
 class AuthController extends Controller
 {
-    public function getSignUp(Request $request, Response $response) 
+    public function getSignUp(Request $request, Response $response)
     {
-        var_dump($_SESSION);
         return $this->c->view->render($response, 'auth/signup.twig');
     }
 
@@ -33,8 +32,6 @@ class AuthController extends Controller
             'email' => $request->getParam('email'),
             'password' => password_hash($request->getParam('password'), PASSWORD_DEFAULT),
         ]);
-
-        $_SESSION['errors'] = "";
 
         return $response->withRedirect($this->c->router->pathFor('auth.signup'));
     }
