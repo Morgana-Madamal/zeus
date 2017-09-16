@@ -3,5 +3,7 @@
     <input type="email" name="email" placeholder="you@domain.com" value="{{ oldInput.email }}">
     <input type="text" name="username" placeholder="Username" value="{{ oldInput.username }}">
     <input type="password" name="password" placeholder="Password">
+
+    {{ csrf.field | raw }}
     <input type="submit">
 </form>

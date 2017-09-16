@@ -55,9 +55,16 @@ $container['validator'] = function ($container) {
 
 v::with('Zeus\\Validation\\Rules\\');
 
+$container['csrf'] = function ($container) {
+    return new \Slim\Csrf\Guard;
+};
+
 //Middleware
 $app->add(new \Zeus\Middleware\ValidationErrorsMiddleware($container));
 $app->add(new \Zeus\Middleware\SignUpInputMiddleware($container));
+$app->add(new \Zeus\Middleware\CsrfViewMiddleware($container));
+
+$app->add($container->csrf);
 
 require_once __DIR__ . '/database.php';
 require_once __DIR__ . '/../routes/web.php';
