@@ -13,7 +13,8 @@
         "illuminate/database": "^5.5",
         "robmorgan/phinx": "^0.8.1",
         "respect/validation": "^1.1",
-        "slim/csrf": "^0.8.1"
+        "slim/csrf": "^0.8.1",
+        "fabpot/php-cs-fixer": "^2.7"
     },
     "autoload": {
         "psr-4": {
