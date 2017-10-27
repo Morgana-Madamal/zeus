@@ -1,9 +1,10 @@
 {% extends 'app.twig' %}
 
-{% block content %}    
+{% block content %}
 
     {% if auth.check %}
         <h1>Hello, {{ auth.user.username }}</h1>
+        <a href="{{ path_for('auth.signout') }}">Signout</a
     {% else %}
        <h1>Hello from {{ appName }}</h1>
        <a href="{{ path_for('auth.signup') }}">Signup</a>
