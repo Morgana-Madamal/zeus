@@ -1,7 +1,7 @@
 {
     "name": "zeug/zeus",
     "description": "Control Panel for Domains, E-Mail, DNS and VPS",
-    "keywords": ["slim", "zeus"],
+    "keywords": ["slim", "zeus", "zeug"],
     "license": "GPL-3",
     "type": "project",
     "require": {
@@ -14,7 +14,8 @@
         "robmorgan/phinx": "^0.9.1",
         "respect/validation": "^1.1",
         "slim/csrf": "^0.8.1",
-        "fabpot/php-cs-fixer": "^2.7"
+        "friendsofphp/php-cs-fixer": "^2.7",
+        "slim/flash": "^0.4.0"
     },
     "autoload": {
         "psr-4": {
