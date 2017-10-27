@@ -48,7 +48,7 @@ $container['view'] = function ($container) {
 
     $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
     $view->addExtension(new Slim\Views\TwigExtension(
-        $container['router'], 
+        $container['router'],
         $basePath
     ));
 
@@ -67,8 +67,14 @@ $container['validator'] = function ($container) {
 
 v::with('Zeus\\Validation\\Rules\\');
 
+//CSRF Protection
 $container['csrf'] = function ($container) {
     return new \Slim\Csrf\Guard;
+};
+
+//Flash messages
+$container['flash'] = function ($container) {
+    return new \Slim\Flash\Messages();
 };
 
 //Middleware
