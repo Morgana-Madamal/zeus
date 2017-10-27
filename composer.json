@@ -15,7 +15,9 @@
         "respect/validation": "^1.1",
         "slim/csrf": "^0.8.1",
         "friendsofphp/php-cs-fixer": "^2.7",
-        "slim/flash": "^0.4.0"
+        "slim/flash": "^0.4.0",
+        "defuse/php-encryption": "^2.1",
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
         "psr-4": {
