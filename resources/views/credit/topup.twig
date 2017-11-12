@@ -1,0 +1,16 @@
+{% extends 'app.twig' %}
+
+{% block content %}
+<h2>Add credit to your account</h2>
+<form action="{{ path_for('credit.topup') }}" method="POST">
+    <select name="method">
+      <option value="" disabled="disabled" selected="selected">Please select a method</option>
+      <option value="paypal">PayPal</option>
+      <option value="sepa">SEPA</option>
+    </select>
+    <input name="value" value="5.00"  type="number" min="5" step="any">
+
+    {{ csrf.field | raw }}
+    <input type="submit">
+</form>
+{% endblock %}

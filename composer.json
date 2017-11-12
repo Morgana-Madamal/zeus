@@ -17,7 +17,10 @@
         "friendsofphp/php-cs-fixer": "^2.7",
         "slim/flash": "^0.4.0",
         "defuse/php-encryption": "^2.1",
-        "monolog/monolog": "^1.23"
+        "monolog/monolog": "^1.23",
+        "omnipay/paypal": "^2.6",
+        "omnipay/stripe": "^2.4",
+        "omnipay/omnipay": "^2.3"
     },
     "autoload": {
         "psr-4": {
