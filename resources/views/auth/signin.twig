@@ -1,3 +1,6 @@
+{% extends 'app.twig' %}
+
+{% block content %}
 <form action="{{ path_for('auth.signin') }}" method="POST">
     {{ errors | json_encode }}
     <input type="text" name="username" placeholder="Username" value="{{ oldInput.username }}">
@@ -6,3 +9,4 @@
     {{ csrf.field | raw }}
     <input type="submit">
 </form>
+{% endblock %}

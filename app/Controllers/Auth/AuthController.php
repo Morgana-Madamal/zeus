@@ -30,6 +30,7 @@ class AuthController extends Controller
         );
 
         if (!$auth) {
+            $this->c->flash->addMessage('error', 'Could not sign you in with those details.');
             return $response->withRedirect($this->c->router->pathFor('auth.signin'));
         }
 

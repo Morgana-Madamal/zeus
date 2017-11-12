@@ -41,6 +41,10 @@ $container['auth'] = function ($container) {
     return new \Zeus\Auth\Auth;
 };
 
+/*$container['credit'] = function ($container) {
+    return new \Zeus\Credit\Credit;
+};*/
+
 $container['view'] = function ($container) {
     $view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
         'cache' => $container->settings['views']['cache']
@@ -56,6 +60,8 @@ $container['view'] = function ($container) {
         'check' => $container->auth->check(),
         'user' => $container->auth->user(),
     ]);
+
+    $view->getEnvironment()->addGlobal('flash', $container->flash);
 
     return $view;
 };
