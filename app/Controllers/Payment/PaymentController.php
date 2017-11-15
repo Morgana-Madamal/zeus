@@ -22,9 +22,9 @@ class PaymentController extends Controller
         //die($request->getParam('method'));
         if( $request->getParam('method') === "paypal" ) {
           $gateway = Omnipay::create('PayPal_Rest');
-          $gateway->setClientId('AVSooI-D4Zj8ODdVlsf_12Q_DV8e0i6jXdKj_SCkaqf7MxQN805fng06wKlmLFAku3u4hjondST1t5yS');
-          $gateway->setSecret('EIQYdt4I_cQBnunhHm5CZlHcbEPFcjobw15fR35Ap7vE-9knjYUzxfEKpI35MJl9TEkatOqDR7lRrxZI');
-          $gateway->setTestMode(true);
+          $gateway->setClientId(getenv('PAYMENT_PAYPAL_CLIENT_ID'));
+          $gateway->setSecret(getenv('PAYMENT_PAYPAL_CLIENT_SECRET'));
+          $gateway->setTestMode(getenv('PAYMENT_TESTS'));
           $purchase = $gateway->purchase(array(
               'currency' => 'EUR',
               'amount' => '15.00',
