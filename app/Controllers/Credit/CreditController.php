@@ -9,7 +9,6 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Respect\Validation\Validator as v;
 use Omnipay\Omnipay as Omnipay;
 
-
 class CreditController extends Controller
 {
     public function getTopUp(Request $request, Response $response)
@@ -19,6 +18,5 @@ class CreditController extends Controller
 
     public function postTopUp(Request $request, Response $response)
     {
-      
     }
 }
