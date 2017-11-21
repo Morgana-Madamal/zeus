@@ -16,8 +16,6 @@ class CreateUsersTable extends Migration
             $table->string('vat_id')->nullable();
             $table->string('password');
             $table->float('credit')->default(0);
-            $table->string('totp')->nullable();
-            $table->string('totp_backup')->nullable();
             $table->integer('vat')->nullable();
             $table->timestamps();
         });
