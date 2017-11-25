@@ -2,10 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>{{ appName }}</title>
-  </head>
-  <body>
-    {% include 'partials/flashmessage.twig' %}
-    {% block content %}{% endblock %}
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="/assets/css/materialize.css"/>
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+     <title>{{ appName }}</title>
+   </head>
+   <body>
+     {% include 'partials/flashmessage.twig' %}
+     {% block content %}{% endblock %}
+
+   <!--Import jQuery before materialize.js-->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="/assets/js/bin/materialize.min.js"></script>
   </body>
 </html>

@@ -1,12 +1,33 @@
 {% extends 'app.twig' %}
 
 {% block content %}
-<form action="{{ path_for('auth.signin') }}" method="POST">
-    {{ errors | json_encode }}
-    <input type="text" name="username" placeholder="Username" value="{{ oldInput.username }}">
-    <input type="password" name="password" placeholder="Password">
+<main>
+ <div class="valign-wrapper row login grey lighten-5">
+  <div class="col s10 pull-s1 m4 pull-m2 l2 pull-l5 z-depth-3">
+    <form action="{{ path_for('auth.signin') }}" method="POST">
+      <div class="header blue white-text">
+        <h5>Sign in</h5>
+      </div>
+      <div class="login-box">
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="text">Username </label>
+            <input type="text" class="validate" name="username" id="text" />
+          </div>
+          <div class="input-field col s12">
+            <label for="password">Password </label>
+            <input type="password" class="validate" name="password" id="password" />
+          </div>
+        </div>
+      </div>
 
-    {{ csrf.field | raw }}
-    <input type="submit">
-</form>
+      <div class="footer grey lighten-3">
+        <button type="submit" class="grey-text" name="button">Next</button>
+      </div>
+
+      {{ csrf.field | raw }}
+    </form>
+  </div>
+</div>
+</main>
 {% endblock %}
